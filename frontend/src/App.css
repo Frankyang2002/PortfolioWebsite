@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: black;
   color: white;
   padding: 15px;
   text-align: center;
@@ -17,32 +17,6 @@ header {
   width: 100%;
   z-index: 1000;
   height: var(--navbar-height);
-}
-
-.logo {
-  float: left;
-  margin-right: 20px;
-}
-
-nav {
-  float: left;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
 }
 
 .contentWrapper {
@@ -54,10 +28,45 @@ nav a {
 
 .section{
   flex: 1;
-  min-height: 60vh; /* Each section takes at least 40% of viewport height */
+  min-height: 95vh; /* Each section takes at least 40% of viewport height */
+  max-height: 95vh; /* Each section takes at least 40% of viewport height */
 }
 
-.landingSection {
+/* Right navigation css things*/
+.sections-container {
+  flex: 1;
+}
+
+.active {
+  background-color: #f0f0f0;
+}
+
+.navigation-indicator {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #FFD700;
+}
+
+/*individual sections*/
+#landing {
   display: flex;
   align-items: center; /* Vertical centering */
   justify-content: left; /* Horizontal centering */
@@ -87,27 +96,102 @@ nav a {
 }
 
 
-
-.projectsSection {
+#projects {
   background-color: black; /* Green background color */
   display: flex;
   width: 100%;
+  color:white; 
+  
 }
 
-.blogSection {
+.project-section-title{
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: center;
+  text-align: center;
+  height: 90vh; /* Set the height of the landing section, adjust as needed */
+  font-size: 50px;
+  margin-top: 5%;
+  margin-left: 43%;
+}
+
+/* project css */
+.project-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+
+  /* Clip the hexagon shape */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.project-fade {
+  position: absolute;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.project-previous {
+  left: 0%;
+}
+
+.project-next {
+  right: 0%;
+  width: 20%;
+}
+
+.project-current {
+  position: relative;
+  overflow: hidden;
+  transform: none;
+  margin-left: -40px; 
+}
+
+.selected-project-text {
+  margin-left: -120px; 
+}
+
+.project-current img {
+  object-position: center center;
+  transform: none;
+  display: block;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.button-wrapper {
+  position: relative;
+  z-index: 1; /* Set a higher z-index to position it above the faded images */
+  margin-top: 10px; /* Adjust as needed to align with the previous image */
+}
+
+/* blog css */
+#blog {
   background-color: white; /* Red background color */
   display: flex;
   width: 100%;
+  color:black;
 }
 
-.contactSection {
+#profile {
   background-color: black; /* Green background color */
   display: flex;
   width: 100%;
+  color:white; 
 }
 
-.secretSection {
-  background-color: white; /* Red background color */
+#contact {
+  background-color: white; /* Green background color */
   display: flex;
   width: 100%;
+  color:black; 
 }
+
+#extra {
+  background-color: black; /* Red background color */
+  display: flex;
+  width: 100%;
+  color:white; 
+}
+
