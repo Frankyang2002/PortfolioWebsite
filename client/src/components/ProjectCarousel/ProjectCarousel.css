@@ -6,7 +6,8 @@
     width: 100%; /* Adjust as needed */
     padding-left: 10%;
     margin: 200px; /* Horizontally center the carousel */
-    margin-left: -43%;
+    margin-left: -48%;
+    
 }
 
 .selected-project {
@@ -16,8 +17,8 @@
 
 .carousel-button {
     font-size: 24px;
-    background-color: black; /* Adjust as needed */
-    color: white;
+    background-color: #fff; /* Adjust as needed */
+    color: #A8D0E6;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -29,13 +30,15 @@
     margin-left: 5%;
 }
 
-
+/*for the prev and after project images on the left and right*/
 .project-fade {
     position: absolute;
     opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border: 4px solid #fff;
 }
+
 
 .project-previous {
     left: 0%;
@@ -51,21 +54,36 @@
     overflow: hidden;
     transform: none;
     margin-left: -40px; 
+    border: 4px solid #fff; /* Add a white border around the clip path */
+
 }
 
 .selected-project-text {
     margin-left: -120px; 
 }
 
+
+/*for middle project*/
 .project-current img {
     object-position: center center;
     transform: none;
     display: block;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(
+        50% 0%,
+        100% 25%,
+        100% 75%,
+        50% 100%,
+        0% 75%,
+        0% 25%
+    );
 }
+
+
+
 
 .button-wrapper {
     position: relative;
     z-index: 1; /* Set a higher z-index to position it above the faded images */
     margin-top: 10px; /* Adjust as needed to align with the previous image */
 }
+

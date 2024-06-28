@@ -32,7 +32,7 @@ nav button:hover {
     background-color: white;
 }
 
-nav button.active {
+nav button.active-button {
     background-color: white;
     color: black;
 }

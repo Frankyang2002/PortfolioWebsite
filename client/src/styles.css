@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Your Chosen Font';
+    src: url('../public/LeagueSpartan-Bold.otf') format('woff2');
+    /* Add other font formats if necessary */
+}
+
+body {
+    font-family: 'Your Chosen Font', sans-serif;
+}

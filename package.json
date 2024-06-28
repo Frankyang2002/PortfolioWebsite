@@ -1,5 +1,26 @@
 {
   "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
     "smooth-scrollbar": "^8.8.4"
-  }
+  },
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frankyang2002/PortfolioWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frankyang2002/PortfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/Frankyang2002/PortfolioWebsite#readme",
+  "description": ""
 }

@@ -1,11 +1,10 @@
 
-:root {
-  --navbar-height: 30px; /* Change this value to the desired height */
-}
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
+
 }
 
 header {
@@ -28,8 +27,8 @@ header {
 
 .section{
   flex: 1;
-  min-height: 95vh; /* Each section takes at least 40% of viewport height */
-  max-height: 95vh; /* Each section takes at least 40% of viewport height */
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 /* Right navigation css things*/
@@ -61,8 +60,8 @@ header {
   cursor: pointer;
 }
 
-.dot.active {
-  background-color: #FFD700;
+.dot.active-dot {
+  background-color: #fff;
 }
 
 /*individual sections*/
@@ -72,18 +71,19 @@ header {
   justify-content: left; /* Horizontal centering */
   text-align: center; /* Center text within the landing section */
   width: 100%;
-  background-color: white; /* Blue background color */
-
+  
+  background-color: #F8E9A1; /* Blue background color */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(248, 233, 161, 1)),
+                url('../public/landingbackground.jpg') center/cover no-repeat;
+  color:white; 
+  
 }
 
-.landing-image {
-  padding-left: 10vw;
-  object-fit: cover; /* This property ensures the image covers the entire container */
-}
+
 
 .landing-text {
   flex: 1;
-  padding-left: 20px; /* Adjust as needed for spacing */
+  padding-left: 20%; /* Adjust as needed for spacing */
   font-size: 40px;
   text-align: left;
 }
@@ -96,13 +96,34 @@ header {
 }
 
 
+
+
 #projects {
-  background-color: black; /* Green background color */
+  background-color: #f8c4a1; /* Green background color */
+  display: flex;
+  width: 100%;
+  color:white;
+  
+}
+
+#profile {
+  background-color: #A8D0E6; /* Red background color */
+  display: flex;
+  width: 100%;
+  color:white;
+}
+
+/* blog css */
+#blog {
+  background-color: #F76C6C; /* Green background color */
   display: flex;
   width: 100%;
   color:white; 
   
 }
+
+
+
 
 .project-section-title{
   display: flex;
@@ -166,32 +187,31 @@ header {
   margin-top: 10px; /* Adjust as needed to align with the previous image */
 }
 
-/* blog css */
-#blog {
-  background-color: white; /* Red background color */
-  display: flex;
-  width: 100%;
-  color:black;
-}
 
-#profile {
-  background-color: black; /* Green background color */
+
+#fullprofile {
+  background-color: #374785; /* Green background color */
   display: flex;
   width: 100%;
   color:white; 
 }
 
 #contact {
-  background-color: white; /* Green background color */
-  display: flex;
-  width: 100%;
-  color:black; 
-}
-
-#extra {
-  background-color: black; /* Red background color */
+  background-color: #374785; /* Red background color */
   display: flex;
   width: 100%;
   color:white; 
+  background: linear-gradient(rgba(55, 71, 133, 1), rgba(0, 0, 0, 0.4)),
+                url('../public/code.jpeg') center/cover no-repeat;
 }
 
+.cursor-light {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.1s ease-out;
+}

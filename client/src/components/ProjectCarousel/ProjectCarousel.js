@@ -37,11 +37,12 @@ const ProjectCarousel = () => {
                 <div className="project-fade project-previous">
                 <img src={projectData[(projectIndex - 1 + projectData.length) % projectData.length].image} alt="Previous Project" style={{width:'300px', height: '300px'}}/>
                 </div>
-            )}
+            )} 
+            
 
             <button className="button-wrapper carousel-button" onClick={handlePrevProject}>&lt;</button>
             <div className="project-current selected-project">
-                <img src={selectedProject.image} alt="Currproject" style={{width:'300px', height: '300px'}} />
+                <img src={selectedProject.image} alt="Currproject" style={{width:'300px', height: '300px'}} className='curr-project-frame'/>
                 <div className="project-current selected-project-text">
                 <h3>{selectedProject.name}</h3>
                 <p>{selectedProject.description}</p>
